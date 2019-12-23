@@ -24,6 +24,10 @@ module.exports = {
       content: 'docs/styleguide.md',
     },
     {
+      name: 'Colors',
+      content: 'docs/colors.md',
+    },
+    {
       name: 'Documentation',
       content: 'docs/documentation.md',
     },
