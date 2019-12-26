@@ -9,7 +9,6 @@ import 'opensans-npm-webfont';
 import 'stylesheets/bootstrap-submenus.less';
 import 'toastr/toastr.less';
 import 'rickshaw/rickshaw.css';
-import 'stylesheets/graylog2.less';
 
 import ServerUnavailablePage from 'pages/ServerUnavailablePage';
 import StoreProvider from 'injection/StoreProvider';
