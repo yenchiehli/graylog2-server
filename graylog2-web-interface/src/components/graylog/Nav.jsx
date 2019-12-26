@@ -4,7 +4,6 @@ import styled, { css } from 'styled-components';
 
 import teinte from 'theme/teinte';
 import { colorLevel } from 'theme/util';
-import navTabsStyles from './styles/nav-tabs';
 
 const Nav = styled(BootstrapNav)(() => {
   const borderColor = colorLevel(teinte.tertiary.due, -3);
