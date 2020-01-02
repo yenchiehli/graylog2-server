@@ -34,6 +34,10 @@ module.exports = {
           name: 'Colors',
           content: 'src/theme/docs/Colors.md',
         },
+        {
+          name: 'Color Utilities',
+          content: 'src/theme/docs/Utilities.md',
+        },
       ],
     },
     {
