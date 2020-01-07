@@ -197,5 +197,8 @@
     "**/fsevents": "1.2.11",
     "jquery": "3.4.1",
     "upath": "1.0.5"
+  },
+  "optionalDependencies": {
+    "fsevents": "*"
   }
 }
