@@ -7319,11 +7319,11 @@ gray-matter@^3.0.8:
     strip-bom-string "^1.0.0"
 
 "graylog-web-plugin@file:packages/graylog-web-plugin":
-  version "3.2.0-SNAPSHOT"
+  version "3.2.0-beta.3-SNAPSHOT"
   dependencies:
     "@babel/preset-env" "7.6.3"
     babel-eslint "9.0.0"
-    eslint-config-graylog "file:../../../../Library/Caches/Yarn/v4/npm-graylog-web-plugin-3.2.0-SNAPSHOT-6b5d27e0-4be5-43b5-b411-2a3e1c260a7b-1574687464651/node_modules/eslint-config-graylog"
+    eslint-config-graylog "file:../../../../../../Library/Caches/Yarn/v6/npm-graylog-web-plugin-3.2.0-beta.3-SNAPSHOT-dde9676a-b400-4491-a047-7a329dddf545-1578429835138/node_modules/eslint-config-graylog"
     html-webpack-plugin "3.2.0"
     javascript-natural-sort "0.7.1"
     jquery "3.4.1"
@@ -12860,7 +12860,7 @@ react-styleguidist@^9.1.16:
     webpack-dev-server "^3.2.1"
     webpack-merge "^4.2.1"
 
-react-test-renderer@^16.0.0-0, react-test-renderer@^16.9.0:
+react-test-renderer@^16.0.0-0:
   version "16.9.0"
   resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-16.9.0.tgz#7ed657a374af47af88f66f33a3ef99c9610c8ae9"
   integrity sha512-R62stB73qZyhrJo7wmCW9jgl/07ai+YzvouvCXIJLBkRlRqLx4j9RqcLEAfNfU3OxTGucqR2Whmn3/Aad6L3hQ==
