@@ -3,10 +3,14 @@ import PropTypes from 'prop-types';
 import lodash from 'lodash';
 import { Link } from 'react-router';
 
+import { Alert } from 'components/graylog';
 import { extractDurationAndUnit } from 'components/common/TimeUnitInput';
+import { Icon } from 'components/common';
 import PermissionsMixin from 'util/PermissionsMixin';
 import { naturalSortIgnoreCase } from 'util/SortUtils';
 import Routes from 'routing/Routes';
+import validateExpression from 'logic/alerts/AggregationExpressionValidation';
+
 
 import AggregationConditionSummary from './AggregationConditionSummary';
 import withStreams from './withStreams';
@@ -74,6 +78,8 @@ class FilterAggregationSummary extends React.Component {
     const effectiveStreamIds = PermissionsMixin.isPermitted(currentUser.permissions, 'streams:read')
       ? streams : [];
 
+    const validationResults = validateExpression(conditions.expression, series);
+
     return (
       <dl>
         <dt>Type</dt>
@@ -92,7 +98,14 @@ class FilterAggregationSummary extends React.Component {
             <dd>{groupBy && groupBy.length > 0 ? groupBy.join(', ') : 'No Group by configured'}</dd>
             <dt>Create Events if</dt>
             <dd>
-              <AggregationConditionSummary series={series} conditions={conditions} />
+              {validationResults.isValid
+                ? <AggregationConditionSummary series={series} conditions={conditions} />
+                : (
+                  <Alert bsSize="small" bsStyle="danger"><Icon name="exclamation-triangle" />&nbsp;
+                    Condition is not valid: {validationResults.errors.join(', ')}
+                  </Alert>
+                )
+              }
             </dd>
           </React.Fragment>
         )}
